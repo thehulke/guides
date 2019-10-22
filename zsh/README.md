@@ -45,7 +45,7 @@
 
 ## `.zshrc`
 <details>
-	<summary>Copy paste this file into your `~/.zshrc` file</summary>
+	<summary>Copy paste the following into your `~/.zshrc` file</summary>
 
 ```bash
 # If you come from bash you might have to change your $PATH.
