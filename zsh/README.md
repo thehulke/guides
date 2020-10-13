@@ -12,7 +12,7 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 7. restart your terminal
 
 ## install `zsh`
-<details>
+<details> <summary>Installtion</summary>
 
 ### Mac
 
@@ -28,6 +28,7 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 
 `https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH`
 </details>
+
 ## Install oh-my-zsh
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
