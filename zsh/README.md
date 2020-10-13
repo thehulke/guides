@@ -1,8 +1,8 @@
 # P.*.M.P your terminal - Use ZSH instead of Bash
 
 First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
-Ignore the tutorial inside the link
-sammry tutorial :
+- Ignore the tutorial inside the link
+- sammry tutorial:
 1. install zsh
 2. install oh-my-zsh
 3. install preferd fonts
