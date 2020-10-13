@@ -2,7 +2,8 @@
 
 First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
 - Ignore the tutorial inside the link
-- sammry tutorial:
+
+sammry:
 1. install zsh
 2. install oh-my-zsh
 3. install preferd fonts
@@ -35,13 +36,15 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 
 ## Install Preferd Fonts - `nerd-fonts` - fix it
 <details> <summary>Follow the steps here:</summary>
+
 - `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
 - Go to repo. folder
 - run `./install.sh`
 
-
 **OR**
+
 - `cd ~/Library/Fonts && curl -fLo "Meslo LG L Regular Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete.ttf`
+
 
 - Set 1 of the above `nerd-fonts` in the terminal settings:
 - in Iterm go to preferences -> prfofiles tab-> text tab -> font
@@ -49,14 +52,17 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 
 ## Install Addons & plugins flow
 <details> <summary>Follow the steps here:</summary>
+
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 - `source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 - `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+
 </details>
 
 ## Favorite terminal theme (fix it to be more clear)
 <details> <summary>Follow the steps here:</summary>
+
 - `git clone https://github.com/carloscuesta/materialshell.git --depth 1`
 - Go to `shell-color-themes/macOS`
 - paste the shell scheme to a premade shells themes folder
