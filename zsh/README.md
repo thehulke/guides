@@ -34,7 +34,7 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## Install Preferd Fonts - `nerd-fonts` - fix it
-
+<details> <summary>Installtion</summary>
 - `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
 - Go to repo. folder
 - run `./install.sh`
@@ -45,16 +45,18 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 
 - Set 1 of the above `nerd-fonts` in the terminal settings:
 - in Iterm go to preferences -> prfofiles tab-> text tab -> font
+</details>
 
 ## Install Addons & plugins flow
-
+<details> <summary>Installtion</summary>
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 - `source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 - `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+</details>
 
 ## Favorite terminal theme (fix it to be more clear)
-
+<details> <summary>Installtion</summary>
 - `git clone https://github.com/carloscuesta/materialshell.git --depth 1`
 - Go to `shell-color-themes/macOS`
 - paste the shell scheme to a premade shells themes folder
@@ -64,7 +66,7 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 
 [Go to materialShell page and follow instructions](https://github.com/carloscuesta/materialshell)
 
-
+</details>
 
 ## Configure ZSH - `.zshrc`
 <details>
