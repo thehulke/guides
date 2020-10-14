@@ -36,40 +36,43 @@ Summary:
 
 ## Install Preferd Fonts - `nerd-fonts` - fix it
 <details> <summary>Follow the steps here:</summary>
+  
+1. Do one of the alternative
+    1. Run `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
+    2. Go to repo. folder
+    3. Run `./install.sh`
 
-- `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
-- Go to repo. folder
-- run `./install.sh`
+     **OR**
 
-**OR**
-
-- `cd ~/Library/Fonts && curl -fLo "Meslo LG L Regular Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete.ttf`
+     Run `cd ~/Library/Fonts && curl -fLo "Meslo LG L Regular Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched- fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete.ttf`
 
 
-- Set 1 of the above `nerd-fonts` in the terminal settings:
-- in Iterm go to preferences -> prfofiles tab-> text tab -> font
+2. Set 1 of the above `nerd-fonts` in the terminal settings:
+    - in Iterm go to preferences -> prfofiles tab-> text tab -> font
+
 </details>
 
 ## Install Addons & plugins flow
 <details> <summary>Follow the steps here:</summary>
-
-- `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
-- `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+  
+1. Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+2. Run `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+3. Run `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
 
 </details>
 
 ## Favorite terminal theme (fix it to be more clear)
-<details> <summary>Follow the steps here:</summary>
+<details> 
+	<summary>Follow the steps here:</summary>  
 
-- `git clone https://github.com/carloscuesta/materialshell.git --depth 1`
-- Go to `shell-color-themes/macOS`
-- paste the shell scheme to a premade shells themes folder
-- apply to your terminal
+[Go to materialShell page and follow instructions](https://github.com/carloscuesta/materialshell)
 
 **OR**
 
-[Go to materialShell page and follow instructions](https://github.com/carloscuesta/materialshell)
+1. Run `git clone https://github.com/carloscuesta/materialshell.git --depth 1`
+2. Go to `shell-color-themes/macOS`
+3. Paste the shell scheme to a premade shells themes folder
+4. Apply to your terminal
 
 </details>
 
