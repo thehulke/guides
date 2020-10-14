@@ -3,7 +3,7 @@
 First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
 - Ignore the tutorial inside the link
 
-sammry:
+Summary:
 1. install zsh
 2. install oh-my-zsh
 3. install preferd fonts
@@ -233,6 +233,7 @@ POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL9K_BATTERY_LOW_COLOR='red'
 POWERLEVEL9K_BATTERY_ICON=`prompt_zsh_battery_level `
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 plugins=(
   git
   iterm2
