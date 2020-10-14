@@ -4,15 +4,15 @@ First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-w
 - Ignore the tutorial inside the link
 
 Summary:
-1. install zsh
-2. install oh-my-zsh
-3. install preferd fonts
-4. install plugins and add ons to oh-my-zsh
-5. configure ZSH
-6. set favorite theme and color presets
-7. restart your terminal
+1. Install zsh
+2. Install oh-my-zsh
+3. Install preferd fonts
+4. Install plugins and add ons to oh-my-zsh
+5. Configure ZSH (edit .zshrc file)
+6. Set favorite theme and color presets
+7. Restart your terminal
 
-## install `zsh`
+## Install `zsh`
 <details> <summary>Follow the steps here:</summary>
 
 ### Mac
@@ -21,7 +21,7 @@ Summary:
 - `brew install zsh`
 - `chsh -s /bin/zsh`
 
-### ubuntu
+### Ubuntu
 
 - `sudo apt-get install zsh`
 
@@ -141,46 +141,7 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-# zsh_internet_signal(){
-#   #source on quality levels - http://www.wireless-nets.com/resources/tutorials/define_SNR_values.html
-#   #source on signal levels  - http://www.speedguide.net/faq/how-to-read-rssisignal-and-snrnoise-ratings-440
-#   local signal=$(airport -I | grep agrCtlRSSI | awk '{print $2}' | sed 's/-//g')
-#   local noise=$(airport -I | grep agrCtlNoise | awk '{print $2}' | sed 's/-//g')
-#   local SNR=$(bc <<<"scale=2; $signal / $noise")
-#   local net=$(curl -D- -o /dev/null -s http://www.google.com | grep HTTP/1.1 | awk '{print $2}')
-#   local color='%F{yellow}'
-#   local symbol="\uf197"
-#   # Excellent Signal (5 bars)
-#   if [[ ! -z "${signal// }" ]] && [[ $SNR -gt .40 ]] ;
-#     then color='%F{black}' ; symbol="\uf1eb" ;
-#   fi
-#   # Good Signal (3-4 bars)
-#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .40 ]] && [[ $SNR -gt .25 ]] ;
-#     then color='%F{green}' ; symbol="\uf1eb" ;
-#   fi
-#   # Low Signal (2 bars)
-#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .25 ]] && [[ $SNR -gt .15 ]] ;
-#     then color='%F{yellow}' ; symbol="\uf1eb" ;
-#   fi
-#   # Very Low Signal (1 bar)
-#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .15 ]] && [[ $SNR -gt .10 ]] ;
-#     then color='%F{red}' ; symbol="\uf1eb" ;
-#   fi
-#   # No Signal - No Internet
-#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .10 ]] ;
-#     # then color='%F{red}' ; symbol="\uf011";
-#     then color='%F{red}' ; symbol="\uf204";
-#   fi
-#   if [[ -z "${signal// }" ]] && [[ "$net" -ne 200 ]] ;
-#     # then color='%F{red}' ; symbol="\uf011";
-#     then color='%F{red}' ; symbol="\uf204" ;
-#   fi
-#   # Ethernet Connection (no wifi, hardline)
-#   if [[ -z "${signal// }" ]] && [[ "$net" -eq 200 ]] ;
-#     then color='%F{blue}' ; symbol="\uf197" ;
-#   fi
-#   echo -n "%{$color%}$symbol " # \f1eb is wifi bars
-# }
+
 #### End of laptop config
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/${whoami}/.oh-my-zsh"
