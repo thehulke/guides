@@ -39,7 +39,7 @@ Summary:
   
 1. Do one of the alternative
     1. Run `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
-    2. Go to repo. folder
+    2. Go to the nerd-fonts git repo folder (where you clonned)
     3. Run `./install.sh`
 
      **OR**
