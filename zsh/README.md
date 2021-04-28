@@ -1,9 +1,11 @@
 # P.*.M.P your terminal - Use ZSH instead of Bash
 
 First [Read me - what is zsh](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
+
 - Ignore the tutorial inside the link
 
 Summary:
+
 1. Install zsh
 2. Install oh-my-zsh
 3. Install preferd fonts
@@ -13,6 +15,7 @@ Summary:
 7. Restart your terminal
 
 ## Install `zsh`
+
 <details> <summary>Follow the steps here:</summary>
 
 ### Mac
@@ -28,6 +31,7 @@ Summary:
 ### Other OS
 
 - `https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH`
+
 </details>
 
 ## Install oh-my-zsh
@@ -35,8 +39,9 @@ Summary:
 - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## Install Preferd Fonts - `nerd-fonts` - fix it
+
 <details> <summary>Follow the steps here:</summary>
-  
+
 1. Do one of the alternative
     1. Run `git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1`
     2. Go to the nerd-fonts git repo folder (where you clonned)
@@ -46,15 +51,15 @@ Summary:
 
      Run `cd ~/Library/Fonts && curl -fLo "Meslo LG L Regular Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched- fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete.ttf`
 
-
 2. Set 1 of the above `nerd-fonts` in the terminal settings:
     - in Iterm go to preferences -> prfofiles tab-> text tab -> font
 
 </details>
 
 ## Install Addons & plugins flow
+
 <details> <summary>Follow the steps here:</summary>
-  
+
 1. Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 2. Run `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 3. Run `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
@@ -62,8 +67,9 @@ Summary:
 </details>
 
 ## Favorite terminal theme (fix it to be more clear)
-<details> 
-	<summary>Follow the steps here:</summary>  
+
+<details>
+ <summary>Follow the steps here:</summary>
 
 [Go to materialShell page and follow instructions](https://github.com/carloscuesta/materialshell)
 
@@ -77,12 +83,14 @@ Summary:
 </details>
 
 ## Configure ZSH - `.zshrc`
+
 <details>
-	<summary>Copy paste the following into your `~/.zshrc` file</summary>
+ <summary>Copy paste the following into your `~/.zshrc` file</summary>
 
 ```bash
- If you come from bash you might have to change your $PATH.
+# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 #### Only fot laptop config!
 prompt_zsh_battery_level() {
   local percentage1=`pmset -g ps  |  sed -n 's/.*[[:blank:]]+*\(.*%\).*/\1/p'`
@@ -131,6 +139,7 @@ prompt_zsh_battery_level() {
   fi
   echo -n "%{$color%}$symbol" ;
 }
+
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -141,13 +150,63 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
+# zsh_internet_signal(){
+#   #source on quality levels - http://www.wireless-nets.com/resources/tutorials/define_SNR_values.html
+#   #source on signal levels  - http://www.speedguide.net/faq/how-to-read-rssisignal-and-snrnoise-ratings-440
+#  local signal=$(airport -I | grep agrCtlRSSI | awk '{print $2}' | sed 's/-//g')
+#   local noise=$(airport -I | grep agrCtlNoise | awk '{print $2}' | sed 's/-//g')
+#   local SNR=$(bc <<<"scale=2; $signal / $noise")
 
+#   local net=$(curl -D- -o /dev/null -s http://www.google.com | grep HTTP/1.1 | awk '{print $2}')
+#   local color='%F{yellow}'
+#   local symbol="\uf197"
+
+#   # Excellent Signal (5 bars)
+#   if [[ ! -z "${signal// }" ]] && [[ $SNR -gt .40 ]] ;
+#     then color='%F{black}' ; symbol="\uf1eb" ;
+#   fi
+
+#   # Good Signal (3-4 bars)
+#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .40 ]] && [[ $SNR -gt .25 ]] ;
+#     then color='%F{green}' ; symbol="\uf1eb" ;
+#   fi
+
+#   # Low Signal (2 bars)
+#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .25 ]] && [[ $SNR -gt .15 ]] ;
+#     then color='%F{yellow}' ; symbol="\uf1eb" ;
+#   fi
+
+#   # Very Low Signal (1 bar)
+#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .15 ]] && [[ $SNR -gt .10 ]] ;
+#     then color='%F{red}' ; symbol="\uf1eb" ;
+#   fi
+
+#   # No Signal - No Internet
+#   if [[ ! -z "${signal// }" ]] && [[ ! $SNR -gt .10 ]] ;
+#     # then color='%F{red}' ; symbol="\uf011";
+#     then color='%F{red}' ; symbol="\uf204";
+#   fi
+
+#   if [[ -z "${signal// }" ]] && [[ "$net" -ne 200 ]] ;
+#    # then color='%F{red}' ; symbol="\uf011";
+#     then color='%F{red}' ; symbol="\uf204" ;
+#   fi
+
+#   # Ethernet Connection (no wifi, hardline)
+#   if [[ -z "${signal// }" ]] && [[ "$net" -eq 200 ]] ;
+#     then color='%F{blue}' ; symbol="\uf197" ;
+#   fi
+
+#   echo -n "%{$color%}$symbol " # \f1eb is wifi bars
+# }
 #### End of laptop config
+
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/${whoami}/.oh-my-zsh"
+export ZSH="/Users/<your_mac_username>/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 ################ start custom oh my zsh configs
 POWERLEVEL9K_MODE='nerdfont-complete'
+
 # Please only use this battery segment if you have material icons in your nerd font (or font)
 # Otherwise, use the font awesome one in "User Segments"
 # POWERLEVEL9K_CUSTOM_INTERNET_SIGNAL="zsh_internet_signal"
@@ -189,6 +248,8 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon custom_internet_signal custom
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status  time)
 HIST_STAMPS="mm/dd/yyyy"
 DISABLE_UPDATE_PROMPT=true
+
+
 # battery
 POWERLEVEL9K_BATTERY_CHARGING='yellow'
 POWERLEVEL9K_BATTERY_CHARGED='green'
@@ -196,7 +257,7 @@ POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL9K_BATTERY_LOW_COLOR='red'
 POWERLEVEL9K_BATTERY_ICON=`prompt_zsh_battery_level `
-source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 plugins=(
   git
   iterm2
@@ -206,18 +267,25 @@ plugins=(
   python
   composer
   zsh-autosuggestions
-  zsh-syntax-highlighting
+ zsh-syntax-highlighting
 )
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
 alias suroot='sudo -E -s'
+
 # source ~/.bash_profile
+
 if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
+
 if [ -f ~/.aliases ]; then
     . ~/.aliases;
 fi
+
 ########################## end of custom config
+
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 # nvm setup
@@ -225,5 +293,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
-</details>
 
+</details>
